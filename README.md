@@ -1,8 +1,79 @@
-# personio-time-tracking
-Personio Time Tracking automation
+# Personio Time Automation Scripts
 
-This Code was generated in tandem with Claude.ai
+This repository contains two Python scripts designed to automate time entry in the Personio HR management system. These scripts use GUI automation to input randomized work times within specified parameters, making the time tracking process more efficient and less monotonous.
 
-I have multiple version which are not final yet. But they all have their purpose and work as expected.
+## Scripts
 
-At some point I will merge the two Codes to have one parametrized Code to be the all in one solution.
+1. `time_correction_randomized.py`
+2. `time_automation.py`
+
+Both scripts perform similar functions with slight variations in their implementation.
+
+## Features
+
+- Generates random work start and end times within specified ranges
+- Ensures total work time is between 8 hours 12 minutes and 9 hours
+- Rounds all times to the nearest 5-minute interval
+- Automates data entry into the Personio web interface
+- Supports entering data for multiple days in a single run
+
+## Requirements
+
+- Python 3.x
+- PyAutoGUI library
+
+## Installation
+
+1. Clone this repository:
+   ```
+   git clone https://github.com/your-username/personio-time-automation.git
+   ```
+
+2. Install the required Python library:
+   ```
+   pip install pyautogui
+   ```
+
+## Usage
+
+1. Open your Personio attendance page in your web browser.
+2. Run either of the scripts:
+   ```
+   python time_correction_randomized.py
+   ```
+   or
+   ```
+   python time_automation.py
+   ```
+3. When prompted, enter the number of days you want to process.
+4. Ensure your cursor is in the correct starting position and that the Personio window is one Alt+Tab away from your current window.
+5. The script will switch to the Personio window and begin entering data.
+
+## Customization
+
+You can modify the following parameters in the scripts to suit your needs:
+
+- Work start time range (default: 09:00 - 09:55)
+- Minimum work duration (default: 8 hours 12 minutes)
+- Maximum work duration (default: 9 hours)
+- Break start and end times (default: 12:00 - 12:30)
+
+## Caution
+
+These scripts use GUI automation, which means they simulate keyboard and mouse inputs. Ensure that you:
+
+1. Have permission to use such automation tools with your Personio account.
+2. Do not interact with your computer while the script is running to avoid interfering with the automation.
+3. Are aware of your company's policies regarding time tracking and automation tools.
+
+## Disclaimer
+
+These scripts are provided "as is" without warranty of any kind. Use them at your own risk. The authors are not responsible for any consequences resulting from the use of these scripts.
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome. Feel free to check [issues page](https://github.com/your-username/personio-time-automation/issues) if you want to contribute.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
