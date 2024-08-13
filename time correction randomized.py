@@ -47,8 +47,6 @@ def enter_time_entry(work_start_time, work_stop_time, break_start_time, break_en
 
     time.sleep(pause_time)
 
-    pyautogui.hotkey('alt', 'tab')
-
     # Enter work start time
     pyautogui.hotkey('ctrl', 'a')
     pyautogui.press('delete')
@@ -86,8 +84,8 @@ def enter_time_entry(work_start_time, work_stop_time, break_start_time, break_en
     pyautogui.press('delete')
     enter_time(work_stop_time)
 
-    # Tab to "Save & add next day" button (6 times)
-    for _ in range(6):
+    # Tab to "Save & add next day" button (5 times)
+    for _ in range(5):
         pyautogui.press('tab')
         time.sleep(pause_time)
 
@@ -96,11 +94,18 @@ def enter_time_entry(work_start_time, work_stop_time, break_start_time, break_en
     time.sleep(3)
 
 def main():
-    print("Please switch to the Personio attendance page.")
-    print("The script will start in 2 seconds...")
-    time.sleep(2)
+    print("Script is starting, make sure you have your curser in the right spot and that Personio is one Alt+Tab away.")
 
-    num_days = 1
+    num_days = int(input("Enter the number of days to process: "))
+
+    time.sleep(1)
+
+    # Perform the initial alt+tab to switch to the browser window
+    pyautogui.hotkey('alt', 'tab')
+
+    time.sleep(1)  # Wait a bit longer after switching windows
+
+    
     break_start_time = "12:00"
     break_end_time = "12:30"
 
