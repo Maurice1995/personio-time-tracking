@@ -68,6 +68,15 @@ These scripts use GUI automation, which means they simulate keyboard and mouse i
 
 ## Disclaimer
 
+These scripts were initially generated using an AI language model (specifically, OpenAI's ChatGPT) and then refined and adapted by the repository owner. The process involved:
+
+AI-assisted code generation for the basic structure and logic of the scripts.
+Manual review, testing, and refinement of the AI-generated code by the repository owner.
+Customization to fit specific use cases and requirements.
+Thorough testing to ensure functionality and reliability.
+
+While the foundation of these scripts is AI-generated, the final versions have been vetted, modified, and approved by a human developer. Users should feel confident in the code's functionality but are encouraged to review and test it in their own environments before use.
+
 These scripts are provided "as is" without warranty of any kind. Use them at your own risk. The authors are not responsible for any consequences resulting from the use of these scripts.
 
 ## License
