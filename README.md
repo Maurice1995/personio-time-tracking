@@ -12,7 +12,7 @@ Both scripts perform similar functions with slight variations in their implement
 ## Features
 
 - Generates random work start and end times within specified ranges
-- Ensures total work time is between 8 hours 12 minutes and 9 hours
+- Ensures total work time is between 7 hours 42 minutes and 8 hours 30 minutes
 - Rounds all times to the nearest 5-minute interval
 - Automates data entry into the Personio web interface
 - Supports entering data for multiple days in a single run
@@ -54,8 +54,8 @@ Both scripts perform similar functions with slight variations in their implement
 You can modify the following parameters in the scripts to suit your needs:
 
 - Work start time range (default: 09:00 - 09:55)
-- Minimum work duration (default: 8 hours 12 minutes)
-- Maximum work duration (default: 9 hours)
+- Minimum work duration (default: 8 hours 12 minutes (including 30 minutes break))
+- Maximum work duration (default: 9 hours (including 30 minutes break))
 - Break start and end times (default: 12:00 - 12:30)
 
 ## Caution
@@ -70,10 +70,26 @@ These scripts use GUI automation, which means they simulate keyboard and mouse i
 
 These scripts are provided "as is" without warranty of any kind. Use them at your own risk. The authors are not responsible for any consequences resulting from the use of these scripts.
 
-## Contributing
-
-Contributions, issues, and feature requests are welcome. Feel free to check [issues page](https://github.com/your-username/personio-time-automation/issues) if you want to contribute.
-
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+MIT License
+
+Copyright (c) [2024] 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
