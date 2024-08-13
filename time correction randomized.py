@@ -12,8 +12,10 @@ def random_time(start, end):
     """Generate a random time between start and end, rounded to 5-minute intervals"""
     start_dt = datetime.strptime(start, "%H:%M")
     end_dt = datetime.strptime(end, "%H:%M")
-    delta = end_dt - start_dt
-    random_seconds = random.randint(0, int(delta.total_seconds()))
+    delta = int((end_dt - start_dt).total_seconds())
+    if delta <= 0:
+        return end  # If start is equal to or later than end, return end time
+    random_seconds = random.randint(0, delta)
     random_time = start_dt + timedelta(seconds=random_seconds)
     rounded_time = round_to_nearest_5_minutes(random_time)
     return rounded_time.strftime("%H:%M")
@@ -23,9 +25,13 @@ def generate_work_times():
     
     # Calculate the earliest and latest possible end times
     start_dt = datetime.strptime(work_start_time, "%H:%M")
-    earliest_end = max((start_dt + timedelta(hours=8, minutes=15)).time(), datetime.strptime("17:00", "%H:%M").time())
-    latest_end = min((start_dt + timedelta(hours=9, minutes=00)).time(), datetime.strptime("17:55", "%H:%M").time())
+    earliest_end = max((start_dt + timedelta(hours=8, minutes=12)).time(), datetime.strptime("17:00", "%H:%M").time())
+    latest_end = min((start_dt + timedelta(hours=9)).time(), datetime.strptime("17:55", "%H:%M").time())
     
+    # Ensure earliest_end is not later than latest_end
+    if earliest_end > latest_end:
+        earliest_end = latest_end
+
     work_stop_time = random_time(earliest_end.strftime("%H:%M"), latest_end.strftime("%H:%M"))
     
     return work_start_time, work_stop_time
